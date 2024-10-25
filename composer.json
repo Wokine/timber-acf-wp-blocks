@@ -1,5 +1,5 @@
 {
-  "name": "palmiak/timber-acf-wp-blocks",
+  "name": "wokine/timber-acf-wp-blocks",
   "description": "Create Gutenberg blocks from Twig templates and ACF fields.",
   "keywords": ["wordpress", "gutenberg", "advanced custom fields"],
   "require": {
