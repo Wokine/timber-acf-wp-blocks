@@ -116,14 +116,14 @@ if ( ! class_exists( 'Timber_Acf_Wp_Blocks' ) ) {
                         'keywords'        => $keywords,
                         'mode'            => $file_headers['mode'],
                         'align'           => $file_headers['align'],
-                        'render_template' =>  __DIR__ . '/render_template',
+                        'render_callback' => array( __CLASS__, 'timber_blocks_callback' ),
                         'enqueue_assets'  => $file_headers['enqueue_assets'],
                         'default_data'    => $file_headers['default_data'],
                     );
 
                     if (defined('WKN_TIMBER_ACF_WP_BLOCKS_RENDER_TEMPLATE') && WKN_TIMBER_ACF_WP_BLOCKS_RENDER_TEMPLATE) {
                         unset($data['render_callback']);
-                        $data['render_template'] =  __DIR__ . '/render_template';
+                        $data['render_template'] =  __DIR__ . '/render_template.php';
                     }
 
                     // Removes empty defaults.
